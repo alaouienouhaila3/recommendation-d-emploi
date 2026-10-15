@@ -1,0 +1,11 @@
+Compris, je vais te faire un schéma illustratif (pas un simple flowchart) qui montre comment TF-IDF + similarité cosinus transforme du texte en score de matching — l'objectif est que ce soit visuellement clair pour ton prof, pas juste des boîtes avec des flèches.Voici comment expliquer ce schéma à l'oral, étape par étape, devant le prof :
+
+**1. Les deux textes de départ** — le profil candidat (compétences saisies ou extraites du CV) et chaque offre JSearch (titre + description + entreprise) sont juste du texte brut au départ.
+
+**2. La vectorisation TF-IDF** — chaque mot est pondéré selon deux critères combinés : sa fréquence dans le texte courant (**TF** — Term Frequency, un mot qui revient souvent dans cette offre compte plus), et son caractère rare ou commun dans l'ensemble de toutes les offres (**IDF** — Inverse Document Frequency, un mot comme "python" qui apparaît dans 2 offres sur 50 est plus discriminant qu'un mot comme "expérience" qui apparaît partout). Le résultat : chaque texte devient un vecteur de nombres — c'est ce que fait `TfidfVectorizer` dans `recommender.py`.
+
+**3. La comparaison** — une fois que le profil et chaque offre sont des vecteurs, on mesure l'angle entre eux avec la **similarité cosinus**. Plus l'angle est petit (vecteurs presque alignés), plus les deux textes parlent des mêmes choses.
+
+**4. Le score final** — cet angle est converti en pourcentage (0% = aucun rapport, 100% = identique), c'est ton `score_matching`. Toutes les offres sont ensuite triées par score décroissant, et seules les 10 meilleures sont affichées.
+
+Ce schéma, plus l'explication, plus les résultats Precision@K qu'on a déjà (90%/83%), te donnent une présentation complète et solide de la partie algorithme. Tu veux qu'on prépare aussi un exemple chiffré concret (avec de vrais petits vecteurs simplifiés) pour illustrer encore plus simplement, ou on passe à la tâche suivante ?

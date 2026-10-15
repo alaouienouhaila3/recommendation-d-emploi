@@ -1,0 +1,16 @@
+RESULTATS PRECISION@K
+======================================================================
+Profil                           Offres      P@5     P@10
+----------------------------------------------------------------------
+Développeur Python Junior            26   100.0%   100.0%
+Développeur Fullstack JS             11   100.0%   100.0%
+Data Scientist                       26   100.0%   100.0%
+Ingénieur DevOps                     30   100.0%   100.0%
+Développeur Java                     30   100.0%   100.0%
+Administrateur Réseaux               28    20.0%    30.0%
+Développeur PHP                      20   100.0%   100.0%
+Data Analyst                         30   100.0%   100.0%
+Ingénieur QA / Testeur                5    80.0%    40.0%
+Développeur Mobile                    6   100.0%    60.0%
+----------------------------------------------------------------------
+MOYENNE                                    90.0%    83.0%

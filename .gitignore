@@ -1,0 +1,30 @@
+# Environnement virtuel
+venv/
+env/
+
+# Variables d'environnement (cles API)
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Fichiers temporaires d'upload CV
+*.pdf
+tmp/
+
+# Editeurs / IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Fichiers de sortie generes par jsearch.py (save_jobs_to_json)
+jobs.json
